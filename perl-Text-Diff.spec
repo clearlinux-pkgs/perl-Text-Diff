@@ -4,13 +4,13 @@
 #
 Name     : perl-Text-Diff
 Version  : 1.45
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Text-Diff-1.45.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Text-Diff-1.45.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libt/libtext-diff-perl/libtext-diff-perl_1.45-1.debian.tar.xz
 Summary  : 'Perform diffs on files and record sets'
 Group    : Development/Tools
-License  : Artistic-1.0 Artistic-1.0-Perl GPL-2.0
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-2.0 MIT
 Requires: perl-Text-Diff-license
 Requires: perl-Text-Diff-man
 Requires: perl(Algorithm::Diff)
@@ -69,6 +69,7 @@ make TEST_VERBOSE=1 test
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/perl-Text-Diff
 cp LICENSE %{buildroot}/usr/share/doc/perl-Text-Diff/LICENSE
+cp deblicense/copyright %{buildroot}/usr/share/doc/perl-Text-Diff/deblicense_copyright
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot}
 else
@@ -88,6 +89,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %files license
 %defattr(-,root,root,-)
 /usr/share/doc/perl-Text-Diff/LICENSE
+/usr/share/doc/perl-Text-Diff/deblicense_copyright
 
 %files man
 %defattr(-,root,root,-)
