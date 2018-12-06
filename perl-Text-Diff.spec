@@ -4,7 +4,7 @@
 #
 Name     : perl-Text-Diff
 Version  : 1.45
-Release  : 4
+Release  : 5
 URL      : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Text-Diff-1.45.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Text-Diff-1.45.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libt/libtext-diff-perl/libtext-diff-perl_1.45-1.debian.tar.xz
