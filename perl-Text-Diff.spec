@@ -4,7 +4,7 @@
 #
 Name     : perl-Text-Diff
 Version  : 1.45
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Text-Diff-1.45.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Text-Diff-1.45.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libt/libtext-diff-perl/libtext-diff-perl_1.45-1.debian.tar.xz
@@ -81,7 +81,7 @@ make TEST_VERBOSE=1 test
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Text-Diff
 cp %{_builddir}/Text-Diff-1.45/LICENSE %{buildroot}/usr/share/package-licenses/perl-Text-Diff/740cb0ad7c45b0c0fe1fcaee03cffa1c3ce7f6e4
-cp %{_builddir}/Text-Diff-1.45/deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-Text-Diff/c266b9f053cd302a9145154d1d86ae99a99cee8d
+cp %{_builddir}/debian/copyright %{buildroot}/usr/share/package-licenses/perl-Text-Diff/c266b9f053cd302a9145154d1d86ae99a99cee8d
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -108,6 +108,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Text/Diff.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/Diff/Config.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Text/Diff/Table.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/Diff.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/Diff/Config.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Text/Diff/Table.pm
